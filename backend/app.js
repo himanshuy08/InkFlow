@@ -59,9 +59,9 @@ io.on("connection", (socket) => {
     }
   });
 
-  socket.on("mouseMove", (data) => {
+  socket.on("draw", (data) => {
     console.log(data);
-    socket.broadcast.emit("draw", data);
+    socket.broadcast.emit("draw", data); 
   });
 
   socket.emit("welcome", "Welcome to the server!");
